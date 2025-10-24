@@ -33,8 +33,8 @@ export default function Home() {
   return (
     <div >
       {/* <BlogPost name={"Shubham"} /> */}
-      {/* <h1>Welcome to My Blog Page</h1>
-      <h2>Total Count {count}</h2>
+     <h1>Welcome to My Blog Page</h1>
+     {/*   <h2>Total Count {count}</h2>
       <button onClick={() => apple("Welcome to the course of Next Js")}>
         Click Me
       </button> */}

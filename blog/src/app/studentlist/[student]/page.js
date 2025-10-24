@@ -5,7 +5,7 @@ export default function DynamicStudents({ params }) {
   return (
     <div>
       <h1>Dynamic Students Lists</h1>
-      <h3>Name:{params}</h3>
+      <h3>Name:{params.student}</h3>
     </div>
   );
 }
