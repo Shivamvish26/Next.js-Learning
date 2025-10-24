@@ -1,0 +1,9 @@
+.login-navigation{
+    display: flex;
+    justify-content: space-evenly;
+    margin:20px;
+}
+
+.login-navigation li{
+    list-style: none;
+}

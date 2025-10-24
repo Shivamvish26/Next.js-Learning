@@ -33,29 +33,29 @@ export default function Home() {
   return (
     <div >
       {/* <BlogPost name={"Shubham"} /> */}
-      <h1>Welcome to My Blog Page</h1>
+      {/* <h1>Welcome to My Blog Page</h1>
       <h2>Total Count {count}</h2>
       <button onClick={() => apple("Welcome to the course of Next Js")}>
         Click Me
-      </button>
+      </button> */}
       {/* message passed for the item as "Welcomr to the....." */}
 
-      <button onClick={Suraname}>Increment the Value</button>
+      {/* <button onClick={Suraname}>Increment the Value</button> */}
       {/* <InnerComp/> */}
 
-      {InnerComp()}
+      {/* {InnerComp()} */}
       {/* we can call the inner comp as an function also  */}
-    <br/>
-      <br/>
+    {/* <br/>
+      <br/> */}
       {/* Routing and Navigation */}
-      <Link href="/login">Login Page</Link>
+      {/* <Link href="/login">Login Page</Link>
       <br/>
       <br/>
       <Link href="/about">About Page</Link>
       <br/>
-      <br/>
+      <br/> */}
       {/* Navigation */}
-      <button onClick={()=>router.push("/login")}>GO TO LOGIN PAGE</button>
+      {/* <button onClick={()=>router.push("/login")}>GO TO LOGIN PAGE</button> */}
     </div>
   );
 }
