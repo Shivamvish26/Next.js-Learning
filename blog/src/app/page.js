@@ -9,7 +9,7 @@ export default function Home() {
   const [name, setName] = useState("Yadhav");
   const [count, setCount] = useState(0);
 
-// navigation hook
+  // navigation hook
   const router = useRouter();
 
   {
@@ -31,10 +31,11 @@ export default function Home() {
   };
 
   return (
-    <div >
+    <div>
       {/* <BlogPost name={"Shubham"} /> */}
-     <h1>Welcome to My Blog Page</h1>
-     {/*   <h2>Total Count {count}</h2>
+      <h1>Welcome to My Blog Page</h1>
+      <Link href="/productlistapi">Got to Product API Page</Link>
+      {/*   <h2>Total Count {count}</h2>
       <button onClick={() => apple("Welcome to the course of Next Js")}>
         Click Me
       </button> */}
@@ -45,7 +46,7 @@ export default function Home() {
 
       {/* {InnerComp()} */}
       {/* we can call the inner comp as an function also  */}
-    {/* <br/>
+      {/* <br/>
       <br/> */}
       {/* Routing and Navigation */}
       {/* <Link href="/login">Login Page</Link>
