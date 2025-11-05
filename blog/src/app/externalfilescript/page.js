@@ -1,19 +1,31 @@
 "use client";
-import Script from "next/script";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export default function ExternalFileScriptPage() {
-    return (
-        <div>
-            <h1>External File Script Page</h1>
-            <p>This page demonstrates loading an external script file.</p>
+  const [location, setLocation] = useState("Fetching location...");
 
-            <Script
-                src="../../app/geolocation.js"
-                onLoad={() => {
-                    console.log("External script loaded successfully.");
-                }}
-            />
-        </div>
-    )
+  useEffect(() => {
+    if (!navigator.geolocation) {
+      setLocation("Geolocation is not supported by this browser.");
+    } else {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setLocation(
+            `Latitude: ${position.coords.latitude} Longitude: ${position.coords.longitude}`
+          );
+        },
+        () => {
+          setLocation("Sorry, no position available.");
+        }
+      );
+    }
+  }, []);
+
+  return (
+    <div>
+      <h1>External File Script Page</h1>
+      <p>This page demonstrates loading an external script file.</p>
+      <p>{location}</p>
+    </div>
+  );
 }

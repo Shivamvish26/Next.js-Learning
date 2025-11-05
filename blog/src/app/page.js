@@ -35,6 +35,7 @@ export default function Home() {
       {/* <BlogPost name={"Shubham"} /> */}
       <h1>Welcome to My Blog Page</h1>
       <Link href="/productlistapi">Got to Product API Page</Link>
+      <Link href="/loader">Go to Loader Page</Link>
       {/*   <h2>Total Count {count}</h2>
       <button onClick={() => apple("Welcome to the course of Next Js")}>
         Click Me

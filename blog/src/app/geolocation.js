@@ -4,12 +4,12 @@ function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(success, error);
   } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
+    console.log("Geolocation is not supported by this browser.");
   }
 }
 
 function success(position) {
- console.log(position)
+  console.log(position);
 }
 
 function error() {

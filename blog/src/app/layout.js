@@ -19,6 +19,10 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         ></link>
       </Head> */}
+      <head>
+        <link rel="stylesheet" href="/style.css" />
+        <script src="/global.js"></script>
+      </head>
       <body>{children}</body>
     </html>
   );
