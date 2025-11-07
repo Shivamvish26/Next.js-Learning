@@ -7,6 +7,6 @@ export default function TimetablePage({ params }) {
       <h1>Time Table Page</h1>
       <h2>Name: {params.timetable[0]}</h2>
       <h2>Surname: {params.timetable[1]}</h2>
-    </div>
+    </div>  
   );
 }

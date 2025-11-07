@@ -12,6 +12,6 @@ export const config = {
     // or
      matcher: [
         "/about/:path*", 
-        "/studentlist/:path*"
+        // "/studentlist/:path*"
     ],
 }
