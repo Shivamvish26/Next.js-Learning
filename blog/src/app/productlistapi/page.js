@@ -1,43 +1,31 @@
 "use client";
+import React, { useEffect, useState } from "react";
 
-import { useEffect, useState } from "react";
-
-export default function ProductListApiPage() {
-  const [products, setProducts] = useState([]);
+export default function ProductlistApiPage() {
+  const [data, setdata] = useState([]);
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/posts"
-      );
-      const data = await response.json();
-      // console.log(data)
-      setProducts(data);
+    const fetchData = async () => {
+      const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+      const data = await res.json();
+      setdata(data);
+      console.log(data);
     };
-    fetchProducts();
+    fetchData();
   }, []);
 
   return (
     <div>
-      <h1>Product List from Fetch API</h1>
-      <table border="1" cellPadding="10" cellSpacing="0">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Body</th>
-          </tr>
-        </thead>
-        <tbody>
-          {products.map((item) => (
-            <tr key={item.id}>
-              <td>{item.id}</td>
-              <td>{item.title}</td>
-              <td>{item.body}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <h1 className="text-center position-sticky">Product List API Page</h1>
+      {data.map((item) => {
+        return (
+          <div key={item.id} className="border p-4 m-4">
+            <p className="font-bold">{item.id}</p>
+            <h2 className="text-xl font-bold">{item.title}</h2>
+            <p>{item.body}</p>
+          </div>
+        );
+      })}
     </div>
   );
 }

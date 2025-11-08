@@ -19,6 +19,8 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         ></link>
       </Head> */}
+
+      {/* external file for css and script file */}
       <head>
         <link rel="stylesheet" href="/style.css" />
         <script src="/global.js"></script>
