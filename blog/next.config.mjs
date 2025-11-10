@@ -2,6 +2,15 @@
 const nextConfig = {
     images:{
         domains:['images.unsplash.com']
+    },
+    redirects: async()=>{
+        return[
+            {
+                source:'/redirect',
+                destination:"/",
+                permanent:false
+            }
+        ]
     }
 };
 
