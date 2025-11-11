@@ -49,3 +49,15 @@ h1{
   background-color: tan;
   padding: 10px;
 }
+
+.input-field{
+  display: block;
+  margin: 10px;
+  height: 30px;
+  width: 300px;
+}
+
+.add-user{
+  margin-top: 100px;
+  text-align: -webkit-center;
+}
