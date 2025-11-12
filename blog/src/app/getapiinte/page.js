@@ -1,3 +1,4 @@
+import DeleteUser from "@/util/DeleteUser";
 import Link from "next/link";
 import React from "react";
 
@@ -15,8 +16,14 @@ export default async function GetApiIntePage() {
     <div>
       Get Api Inte Page
       {users.map((item) => (
-        <div key={item.id}>
-          <Link href={`user/${item.id}`}>{item.name}</Link>
+        <div className="" key={item.id}>
+          <Link className="p-5" href={`user/${item.id}`}>
+            {item.name}
+          </Link>
+          <Link className="" href={`user/${item.id}/update`}>
+            Edit
+          </Link>
+          <DeleteUser id={item.id} />
         </div>
       ))}
     </div>

@@ -15,6 +15,9 @@ export default function Page() {
     data = await data.json();
     if (data.success) {
       alert("New User Created");
+      setName("");
+      setAge("");
+      setEmail("");
     } else {
       alert("Some error with data please check and Try Again!!");
     }
@@ -34,7 +37,7 @@ export default function Page() {
         />
         <input
           className="input-field"
-          type="text"
+          type="number"
           placeholder="Enter Age"
           value={age}
           onChange={(e) => setAge(e.target.value)}
